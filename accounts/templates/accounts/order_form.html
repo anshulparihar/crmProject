@@ -1,0 +1,32 @@
+{% extends 'accounts/main.html'%}
+{% load static %}
+{%block content%}
+<style>
+    #orderForm{
+    width: 100px;
+	height: 100px;
+	position: center;
+	top:0;
+	bottom: 1000;
+	left: 100px;
+	right: 0;
+    margin: auto;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+</style>
+    <div class = "row" >
+        <div class="col-md-6">
+           
+               <div id = "orderForm">
+                    <form action="" method="POST" style="border: 10px;">
+                            {% csrf_token %}
+                                <td >{{form.as_p}}</td>
+                                <hr>
+                            <input type="submit" name= "Submit" class="btn btn-success">
+                    </form>
+                </div>
+            
+        </div>
+    </div>
+
+{%endblock%}

@@ -1,0 +1,30 @@
+{% extends 'accounts/main.html'%}
+{% load static %}
+{%block content%}
+<style>
+    #cc{
+        width: 100px;
+	height: 100px;
+
+	
+	position: top;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+
+    }
+</style>
+<div id = "cc">
+    <form action="" method="POST" >
+        <div>
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" name= "Submit" class="btn btn-success">
+        </div>
+    </form>
+</div>
+
+{%endblock%}
